@@ -1,0 +1,23 @@
+<!-- app.component.html -->
+
+<div class="container mt-5">
+  <h1 class="text-center">Seat Reservation System</h1>
+  <div class="text-center">
+    <button class="btn btn-primary m-2" (click)="reserveSeats(1)">Book 1 Seat</button>
+    <button class="btn btn-primary m-2" (click)="reserveSeats(2)">Book 2 Seats</button>
+    <button class="btn btn-primary m-2" (click)="reserveSeats(3)">Book 3 Seats</button>
+    <button class="btn btn-primary m-2" (click)="reserveSeats(4)">Book 4 Seats</button>
+    <button class="btn btn-primary m-2" (click)="reserveSeats(5)">Book 5 Seats</button>
+    <button class="btn btn-primary m-2" (click)="reserveSeats(6)">Book 6 Seats</button>
+    <button class="btn btn-primary m-2" (click)="reserveSeats(7)">Book 7 Seats</button>
+  </div>
+
+  <div class="mt-3">
+    <h2 class="text-center">Seats Availability</h2>
+    <div class="row justify-content-center">
+      <div *ngFor="let row of seats" class="mb-2">
+        <span *ngFor="let seat of row" class="seat mr-1" [ngClass]="{'booked': seat.booked}">{{seat.number}}</span>
+      </div>
+    </div>
+  </div>
+</div>
